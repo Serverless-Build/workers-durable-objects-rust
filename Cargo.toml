@@ -1,0 +1,22 @@
+[package]
+name = "workers-durable-objects-rust"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.75"
+license = "MIT-0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+worker = "=0.8.0"
+worker-macros = "=0.8.0"
+worker-sys = "=0.8.0"
+futures-util = "0.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+lto = true
+strip = true
+codegen-units = 1

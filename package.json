@@ -1,0 +1,11 @@
+{
+  "name": "workers-durable-objects-rust",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev --config wrangler.jsonc",
+    "deploy": "wrangler deploy --config wrangler.jsonc",
+    "check": "cargo fmt --check && cargo check --target wasm32-unknown-unknown && wrangler deploy --dry-run --config wrangler.jsonc"
+  },
+  "devDependencies": { "wrangler": "^4.145.0" }
+}
